@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Case Western Reserve University</title>
+<!--css-->
+                <link rel="stylesheet" href="css/default.css" media ="all"/>
+                <link rel="stylesheet" href="css/styles.css" media="screen" />
+                <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:0px) and (max-width:63em)"/>
+                <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width:64em)"/>
+				<link rel="stylesheet" type="text/css" href="css/nav/component.css" />
+        
+        <!--scripts-->
+		<script src="js/nav/modernizr.custom.js"></script>
+       	<script src="js/nav/classie.js"></script>
+		<script src="js/nav/gnmenu.js"></script>
+
+    <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>$(function () {
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '.mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    });
+    </script>
+</head>
+<body>
+<div class = "wrapper">
+<!--#include virtual="ssi/header.html" -->
+
+<div class="contentWrapper">
+<div class="contentContainer">
+<div class="threeColumnHorizontal">
+	<div class="small">
+    <h2 class="blueBox" id="pageTitle">Chinese Remainder Theorem</h2>
+    </div>
+    
+<div class="big">
+ <div class="mycell" style="text-align:center;">
+<script type="text/x-sage">
+@interact
+def f(A=input_box(1, label="Value 1"),B=input_box(5, label="Modulo 1"),C=input_box(2, label="Value 2"),D=input_box(7, label="Modulo 2"),E=input_box(8, label="Value 3"),F=input_box(16, label="Modulo 3")):
+	L = CRT_list([A,C,E], [B,D,F])
+	html("If x = %s mod %s"%(A,B))
+	html("And x = %s mod %s"%(C,D))
+	html("And x = %s mod %s"%(E,F))
+	html("Then x = %s"%(L))
+	
+</script>
+	</div>
+</div>
+  <div class="small">
+    <h2 class="blueBox">Notes</h2>
+  </div>
+Suppose <img src="http://latex.codecogs.com/svg.latex?n_1,\dots,n_k" border="none"/> are positive integers that are pairwise coprime. Then, for any given sequence of integers <img src="http://latex.codecogs.com/svg.latex?a_1,\dots,a_k" border="none"/> there exists an integer x that solves the following system of simultaneous congruences: <br>
+<img src="http://latex.codecogs.com/svg.latex?\begin{cases} x\equiv a_1 & \mod n_1 \\ \dots \\ x \equiv a_k & \mod n_k\end{cases}" border="none"/><br>
+A solution x exists if and only if 
+<img src="http://latex.codecogs.com/svg.latex?a_i\equiv a_j \mod \gcd(n_i,n_j) \, \forall i,j" border="none"/>.
+    <div class="small">
+    <p></p>
+    </div>
+    
+
+</div>
+
+
+</div><!--end of container-->
+</div><!--end of content wrapper-->
+</div><!--end of wrapper-->
+
+
+<!--#include virtual="ssi/simpleFooter.html" -->
+
+</body>
+</html>

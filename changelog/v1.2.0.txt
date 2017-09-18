@@ -1,0 +1,15 @@
+Changelog v1.1.0
+
+2/16/2014
+
+Additions:
+CSS added to most of the web pages
+
+
+Notes:
+Sent to David Singer, 2/17/2014, for review.
+
+TODO:
+User input for each page must be made, I predict it won't be hard. 
+Implementation with sage may be odd.
+Styles must be applied to subpages.

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Case Western Reserve University</title>
+
+                                <!--css-->
+                <link rel="stylesheet" href="css/default.css" media ="all"/>
+                <link rel="stylesheet" href="css/styles.css" media="screen" />
+                <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:0px) and (max-width:63em)"/>
+                <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width:64em)"/>
+				<link rel="stylesheet" type="text/css" href="css/nav/component.css" />
+        
+        <!--scripts-->
+		<script src="js/nav/modernizr.custom.js"></script>
+       	<script src="js/nav/classie.js"></script>
+		<script src="js/nav/gnmenu.js"></script>
+        
+    <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>$(function () {
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    });
+    </script>
+                
+</head>
+<body>
+<div class = "wrapper">
+<!--#include virtual="ssi/header.html" -->
+
+<div class="contentWrapper">
+<div class="contentContainer">
+<div class="threeColumnHorizontal">
+	<div class="small">
+    	<h2 class="blueBox" id="pageTitle">Euclidean Algorithm</h2>
+    </div>
+    
+<div class="big">
+ <div id="mycell" style="text-align:center;">
+ 
+<script type="text/x-sage">
+@interact
+def f(N=input_box(12, label="Integer 1"), M=input_box(15, label="Integer 2")):
+	d,u,v = xgcd(N,M)
+	html('$$%s=%s(%s)+%s(%s)$$'%(latex(d),latex(N),latex(u),latex(M),latex(v)))
+</script>
+ 
+ </div>
+    </div>
+  <div class="small">
+  <h2 class="blueBox">Notes</h2>
+  </div>
+The extended Euclidean algorithm (xgcd) takes two positive numbers M,N and successively divides one number into another and computes directly the integer quotient and remainder at each stage. This algorithm produces a strictly decreasing sequence of remainders that terminates at zero, where the last nonzero remainder in the sequence is the greatest common denominator (gcd) g. <br>
+The Sage command g,x,y = gcd(M,N) returns the triple g,x,y for which g = x*M + y*N.
+
+
+    
+    <div class="small">
+    <p></p>
+    </div>
+    
+
+</div>
+
+
+
+
+</div><!--end of container-->
+</div><!--end of content wrapper-->
+</div><!--end of wrapper-->
+
+
+<!--#include virtual="ssi/simpleFooter.html" -->
+
+</body>
+</html>

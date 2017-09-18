@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Case Western Reserve University</title>
+
+                <!--css-->
+                <link rel="stylesheet" href="css/default.css" media ="all"/>
+                <link rel="stylesheet" href="css/styles.css" media="screen" />
+                <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:0px) and (max-width:63em)"/>
+                <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width:64em)"/>
+				<link rel="stylesheet" type="text/css" href="css/nav/component.css" />
+        
+        <!--scripts-->
+		<script src="js/nav/modernizr.custom.js"></script>
+       	<script src="js/nav/classie.js"></script>
+		<script src="js/nav/gnmenu.js"></script>
+</head>
+
+<body>
+<div class = "wrapper">
+<!--#include virtual="ssi/header.html" -->
+
+<div class="contentWrapper">
+<div class="contentContainer">
+
+<div class="threeColumnHorizontal">
+    	<div class="small">
+        <p></p>
+        </div>
+    	
+        <div class="big">
+                	<div class="textbox" style="background:#f5f5f5; padding:14px 4px 24px 19px; margin-top:20px;">
+            		<h2>Purpose</h2>
+					<p style="margin-top:3em;">The purpose of this site is to be used as a tool for advanced mathematical computations. 
+                    <br>As many computations in Number Theory and Cryptography require immense calculations, 
+                    this site provides a simple way for any amateur mathematician to do individual calculations without having to learn how to code. </p>
+            		</div>
+               
+                
+                
+                	<div class="textbox" style="background:#f5f5f5; padding:14px 4px 24px 19px; margin-top:20px;">
+            		<h2>Sage</h2>
+            		<p>To allow for large number computations, this website implements the <a href="www.sagemath.org">SAGE</a> programming language.
+                    <br> Sage uses many of the most advanced methodologies, algorithms, and computational engines to 
+                    provide near unfettered computation capabilities. <br>Sage implements calculators like Pari to do many of its calculations.</p>
+                	</div>
+                
+                
+                
+                	<div class="textbox" style="background:#f5f5f5; padding:14px 4px 24px 19px; margin-top:20px;">
+            		<h2>Future Work</h2>
+            			<p>As previously stated, the purpose of this site is to provide Mathematicians with a quick and easy way to do a computation. 
+                        Whether it be professionally, academically, or just for fun, this site allows anything to be done. So, this site must be updated regularly.
+                        Many more computations can be done, but deciding upon what is feasible, needed and necessary is a challenging task.</p>
+                	</div>
+           	
+            </div>
+        </div>
+        
+        <div class="small">
+        <p></p>
+        </div>
+    </div>
+</div><!--end of container-->
+</div><!--end of content wrapper-->
+</div><!--end of wrapper-->
+
+
+<!--#include virtual="ssi/simpleFooter.html" -->
+
+</body>
+</html>

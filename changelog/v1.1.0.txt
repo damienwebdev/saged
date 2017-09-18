@@ -1,0 +1,17 @@
+Changelog v1.1.0
+
+2/9/2014
+
+Addition of new Calculation Pages:
+/powerModRing.html
+/primalityTester.html
+/QuadraticResidue.html
+
+Notes:
+First attempts at large number calculations for primality testing 
+using 500 digits primes ends with a 50 second long CORRECT calculation
+
+TODO:
+
+User input for each page must be made, I predict it won't be hard. 
+Implementation with sage may be odd.

@@ -1,0 +1,18 @@
+Changelog v1.0.0
+
+1/12/2014
+
+Creation of site layout
+	/images/
+	/css/
+	/js/
+	/ssi/
+Creation of basic layout css and html
+	index.html
+	/css/default.html
+	/css/style.css
+	/css/tablet.css
+	/css/desktop.css
+	/ssi/header.html
+	/ssi/footer.html
+

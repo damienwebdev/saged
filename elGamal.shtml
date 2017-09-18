@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Case Western Reserve University</title>
+
+                                <!--css-->
+                <link rel="stylesheet" href="css/default.css" media ="all"/>
+                <link rel="stylesheet" href="css/styles.css" media="screen" />
+                <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:0px) and (max-width:63em)"/>
+                <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width:64em)"/>
+				<link rel="stylesheet" type="text/css" href="css/nav/component.css" />
+        
+        <!--scripts-->
+		<script src="js/nav/modernizr.custom.js"></script>
+       	<script src="js/nav/classie.js"></script>
+		<script src="js/nav/gnmenu.js"></script>
+        
+    <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>$(function () {
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '.mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    });
+    </script>
+                
+</head>
+<body>
+<div class = "wrapper">
+<!--#include virtual="ssi/header.html" -->
+
+<div class="contentWrapper">
+<div class="contentContainer">
+<div class="threeColumnHorizontal">
+	<div class="small">
+    <h2 class="blueBox" id="pageTitle">elGamal Encryption</h2>
+    </div>
+    
+<div class="big">
+ <div class="mycell" style="text-align:center;">
+ 
+<script type="text/x-sage">
+@interact
+def elgamal_encrypt(pub_key = ("Public Key", 210904), g = ("Generator", 3), p = ("Prime", 2^19-1), m = ("Message", 12345)):
+	k = floor( 1+(p-2)*random())
+	c1 = Mod(g,p)^k
+	c2 = m*Mod(pub_key^k,p)
+	html('ciphertext:(%s,%s)'%(latex(c1),latex(c2)))
+    
+</script>
+ 
+ </div>
+ 
+ <div class="mycell" style="text-align:center;">
+ <script type="text/x-sage">
+@interact
+def elgamal_decrypt(pri_key = ("Private Key", 1000), g = ("Generator", 3), p = ("Prime", 2^19-1), m1 = ("Ciphertext 1", 29073), m2 = ("Ciphertext 2", 277350)):
+	M = Mod(m2,p)*Mod(m1,p)^(-pri_key)
+	html('message:%s'%(latex(M)))</script>
+ </div>
+ 
+ 
+ </div>
+    
+ <div class="small">
+ <p></p>
+ </div>
+    
+
+</div>
+
+
+
+
+</div><!--end of container-->
+</div><!--end of content wrapper-->
+</div><!--end of wrapper-->
+
+
+<!--#include virtual="ssi/simpleFooter.html" -->
+
+</body>
+</html>

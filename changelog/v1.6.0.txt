@@ -1,0 +1,22 @@
+Changelog v1.5.0
+
+11/09/2014
+
+Edits:
+ Added pngs of prospective modules: elGamal, euclideanAlgorithm,
+ legendreSymbol, modExponent, modInverse, pohligHellman, primitiveRoots,ellipticCurves
+ Added complete pages: euclideanAlgorithm, modExponent, modInverse
+ 
+Notes:
+ Change directories from relative to localhost to relative to full domain-subdirectories
+ Email David Singer das5 after above
+
+TODO:
+ Edit LaTeX print for existing math concepts
+ Create pages for legendreSymbol, pohligHellman/discreteLog, elGamal, primitiveRoots, ellipticCurves
+ Fix bluebox class
+ Apply styles to subpages
+ 
+Stretch Goals:
+ Apply bootstrap.
+ Make navigation modular for future work

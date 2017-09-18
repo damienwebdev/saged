@@ -1,0 +1,29 @@
+Changelog v1.3.0
+
+2/23/2014
+
+Additions:
+ Slider Added to pages
+ Search Functionality Added
+ About Page added
+ Contact Page Added
+ Javascript Added for Slider
+ 
+
+
+
+
+Notes:
+Sent to David Singer, 2/24/2014, for review.
+Contacted Jason Grout about Copyright info
+
+
+
+TODO:
+User input for each page must be made. LaTeX must be discussed with Anthony.
+
+Maybe make subfolder's and multiple instances of "header" for each folder.
+
+Dealing with wierd sage box spacing with css must be fixed.
+
+Styles must be applied to subpages

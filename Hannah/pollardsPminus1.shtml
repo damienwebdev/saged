@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Case Western Reserve University</title>
+
+                <!--css-->
+                <link rel="stylesheet" href="css/default.css" media ="all"/>
+                <link rel="stylesheet" href="css/styles.css" media="screen" />
+                <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:0px) and (max-width:63em)"/>
+                <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width:64em)"/>
+				<link rel="stylesheet" type="text/css" href="css/nav/component.css" />
+        
+        <!--scripts-->
+		<script src="js/nav/modernizr.custom.js"></script>
+       	<script src="js/nav/classie.js"></script>
+		<script src="js/nav/gnmenu.js"></script>
+
+    <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>$(function () {
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    });
+    </script>
+                
+</head>
+<body>
+<div class = "wrapper">
+<!--#include virtual="ssi/header.html" -->
+
+<div class="contentWrapper">
+<div class="contentContainer">
+<div class="threeColumnHorizontal">
+	<div class="small">
+    	<h2 class="blueBox" id="pageTitle">Pollard's <em>p-1</em> Factorization Algorithm</h2>
+    </div>
+    
+<div class="big">
+	<h2 style="visibility:hidden;">Hidden</h2>
+ <div id="mycell" style="text-align:center;">
+
+ <script type="text/x-sage">
+@interact
+def f(n = ("Enter an integer to be factored", 13927189), b = ("Choose an iterative bound", 100)):
+	a = 2;
+	for j in range(2,b): 
+		a = a**j % n 
+	d = gcd(a-1, n);
+	print "Prime factors of",n,"are:",d,"and",n/d
+	if 1 < d < n: return d;
+	else: return -1; 
+</script>
+ <!---->
+<!--html('${%s} = %s$'%(q, latex(r)))-->
+ </div>
+</div>
+</div>
+<div class="small">
+  <h2 class="blueBox">Notes</h2>
+</div>
+Pollard's <em>p</em>-1 algorithm is useful in finding the prime factors of a number <em>n</em>. Please choose a reasonable bound; values with more than six digits could cause the algorithm to stall. 
+</div>
+
+</div>
+
+</div><!--end of container-->
+</div><!--end of content wrapper-->
+</div><!--end of wrapper-->
+
+
+<!--#include virtual="ssi/simpleFooter.html" -->
+
+</body>
+</html>

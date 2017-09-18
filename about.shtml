@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>About SageD</title>
+
+                <!--css-->
+                <!-- Latest compiled and minified CSS (bootstrap) -->
+				<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
+                <link rel="stylesheet" href="css/default.css" media ="all"/>
+                <link rel="stylesheet" href="css/styles.css" media="screen" />
+                <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:0px) and (max-width:63em)"/>
+                <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width:64em)"/>
+				<link rel="stylesheet" type="text/css" href="css/nav/component.css" />
+        
+        <!--scripts-->
+		<script src="js/nav/modernizr.custom.js"></script>
+       	<script src="js/nav/classie.js"></script>
+		<script src="js/nav/gnmenu.js"></script>
+</head>
+
+<body>
+<div class = "wrapper">
+<!--#include virtual="ssi/header.html" -->
+
+<div class="contentWrapper">
+<div class="contentContainer">
+
+<div class="threeColumnHorizontal">
+    	<div class="small">
+        <p></p>
+        </div>
+    	
+        <div class="big">
+                	<div class="textbox" style="background:#f5f5f5; padding:14px 4px 24px 19px; margin-top:20px;">
+            		<h2>Purpose</h2>
+					<p>The inention of this site is to provide tools for advanced mathematical computations. 
+                    <br>This site not only provides a simple way for any amateur mathematician to do immense calculations,
+                    but also includes instructions and examples of mathematical concepts from subjects like Number Theory and Cryptography.
+                    While an individual need not learn how to code, the explanations provide motivation for future implementation through code.</p>
+            		</div>
+
+                	<div class="textbox" style="background:#f5f5f5; padding:14px 4px 24px 19px; margin-top:20px;">
+            		<h2>Sage</h2>
+            		<p>To allow for large number computations, this website implements the <a href="www.sagemath.org">SAGE</a> programming language.
+                    <br> Sage uses many of today's most advanced methodologies, algorithms, and computational engines to 
+                    provide nearly unfettered computation capabilities. Sage also implements calculators like 
+                    <a href="http://pari.math.u-bordeaux.fr">Pari</a> within its calculations.</p>
+                	</div>
+                            
+                    <div class="textbox" style="background:#f5f5f5; padding:14px 4px 24px 19px; margin-top:20px;">
+            		<h2>Desiderata</h2>
+            			<p>Mathematicians will always need a quick and easy way to do a computation.
+                        <br>Whether a mathematician wants to do this professionally, academically, or leisurely,
+                        this site will (hopefully) get it done. To accommodate nearly any amateur mathematician's need, 
+                        this site should be updated regularly to include more computations of mathematical problems.
+                        Although including more computations can be easily done, deciding which ones are feasible or necessary is a challenge.
+                        </p>
+                	</div>
+           	
+            </div>
+        </div>
+        
+        <div class="small">
+        <p></p>
+        </div>
+    </div>
+</div><!--end of container-->
+</div><!--end of content wrapper-->
+</div><!--end of wrapper-->
+<div class="clear"></div>
+
+
+<!--#include virtual="ssi/simpleFooter.html" -->
+
+</body>
+</html>
