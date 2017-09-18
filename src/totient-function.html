@@ -6,7 +6,7 @@
 		</div>
 
 		<div class="big">
-			<div id="mycell" style="text-align:center;">
+			<div class="mycell" style="text-align:center;">
 
  <script type="text/x-sage">
 
@@ -14,7 +14,7 @@
 def f(U = ("Totient Value", 7)):
 	global r
 	r = euler_phi(U)
-	html('$$\phi(%s) = %s$$'%(latex(U), latex(r)))
+	pretty_print(	html('$$\phi(%s) = %s$$'%(latex(U), latex(r))))
 </script>
 			</div>
         </div>

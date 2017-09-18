@@ -7,14 +7,14 @@
 
 <div class="big">
 	<h2 style="visibility:hidden;">Hidden</h2>
- <div id="mycell" style="text-align:center;">
+ <div class="mycell" style="text-align:center;">
 
 	<script type="text/x-sage">
-	@interact
-	def f(a = ("Argument", 13), x = ("Exponent", 67), N = ("Modulo", 2)):
-		global b
-		b = IntegerModRing(N)(a)^(x)
-		html('$${%s}^{%s} mod \, %s = %s$$'%(latex(a),latex(x), latex(N), latex(b)))
+@interact
+def f(a = ("Argument", 13), x = ("Exponent", 67), N = ("Modulo", 2)):
+	global b
+	b = IntegerModRing(N)(a)^(x)
+	pretty_print(	html('$${ %s}^{ %s} mod \, %s = %s$$'%(latex(a),latex(x), latex(N), latex(b))))
 	</script>
 
  </div>

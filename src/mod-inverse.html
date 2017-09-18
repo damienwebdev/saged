@@ -6,15 +6,15 @@
     </div>
 
 <div class="big">
- <div id="mycell" style="text-align:center;">
+ <div class="mycell" style="text-align:center;">
 
 	<script type="text/x-sage">
-	@interact
-	def f(V=input_box(2, label="Argument"), U=input_box(13, label="Modulo") ):
-		try:
-			r = inverse_mod(V,U)
-		except ZeroDivisionError: 	r = "DNE"
-		html('$${%s}^{-1} mod \, %s = %s$$'%(latex(V),latex(U), r))
+@interact
+def f(V=input_box(2, label="Argument"), U=input_box(13, label="Modulo") ):
+	try:
+		r = inverse_mod(V,U)
+	except ZeroDivisionError: 	r = "DNE"
+	pretty_print(	html('$${ %s}^{-1} mod \, %s = %s$$'%(latex(V),latex(U), r)))
 	</script>
 
  </div>

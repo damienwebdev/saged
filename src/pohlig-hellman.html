@@ -7,15 +7,15 @@
 
 <div class="big">
 	<h2 style="visibility:hidden;">Hidden</h2>
- <div id="mycell" style="text-align:center;">
+ <div class="mycell" style="text-align:center;">
 
 	<script type="text/x-sage">
-	@interact
-	def dlog(e = ("Equivalence class", 8),g = ("Argument", 5),p = ("Modulus", 103)):
-		try:
-			x = log(Mod(e,p),Mod(g,p))
-		except ZeroDivisionError: 	x = "DNE"
-		html('%s = $$%s^{%s} \mod %s'%(latex(e),latex(g),latex(x),latex(p)))
+@interact
+def dlog(e = ("Equivalence class", 8),g = ("Argument", 5),p = ("Modulus", 103)):
+	try:
+		x = log(Mod(e,p),Mod(g,p))
+	except ZeroDivisionError: 	x = "DNE"
+	pretty_print(	html('$$%s = %s^{ %s } \mod %s$$'%(latex(e),latex(g),latex(x),latex(p))))
 	</script>
 
  </div>

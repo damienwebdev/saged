@@ -8,24 +8,23 @@
 <div class="big">
 	 <div class="mycell" style="text-align:center;">
 	<script type="text/x-sage">
-	@interact
-	def f(V=input_box(5, label="Possible Root"), U=input_box(7, label="Integer Field") ):
-		 R = IntegerModRing(U)
-		 a = R(V)
-		 if  a.multiplicative_order() == (U -1):
-		 	print True;
-	 	 else:
-		  	print False;
+@interact
+def f(V=input_box(5, label="Possible Root"), U=input_box(7, label="Integer Field") ):
+ R = IntegerModRing(U)
+ a = R(V)
+ if  a.multiplicative_order() == (U -1):
+ 	print True
+ else:
+	print False
 	</script>
 	</div>
 
     <div class="mycell" style="text-align:center;">
 	<script type="text/x-sage">
-	@interact
-	def f(U=input_box(7, label="Integer Field") ):
-		 R = IntegerModRing(U)
-		 print R.multiplicative_generator()
-
+@interact
+def f(U=input_box(7, label="Integer Field") ):
+	 R = IntegerModRing(U)
+	 print R.multiplicative_generator()
 	</script>
 	</div>
 </div>

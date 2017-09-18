@@ -7,14 +7,14 @@
     </div>
 
 <div class="big">
- <div id="mycell" style="text-align:center;">
+ <div class="mycell" style="text-align:center;">
 
-<script type="text/x-sage">
+	<script type="text/x-sage">
 @interact
 def f(N=input_box(12, label="Integer 1"), M=input_box(15, label="Integer 2")):
 	d,u,v = xgcd(N,M)
-	html('$$%s=%s(%s)+%s(%s)$$'%(latex(d),latex(N),latex(u),latex(M),latex(v)))
-</script>
+	pretty_print(html('$$%s=%s(%s)+%s(%s)$$'%(latex(d),latex(N),latex(u),latex(M),latex(v))))
+	</script>
 
  </div>
     </div>

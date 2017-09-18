@@ -6,13 +6,13 @@
     </div>
 
     <div class="big">
-     <div id="mycell" style="text-align:center;">
-<script type="text/x-sage">
+     <div class="mycell" style="text-align:center;">
+	<script type="text/x-sage">
 @interact
 def f(U = ("Number to be factored", 1)):
 	F = factor(U)
-	html('The Factorization of' + "$$%s$$"%(latex(U))+ 'is' + '$$%s$$'%(latex(F)))
-</script>
+	pretty_print(	html('The Factorization of' + "$$%s$$"%(latex(U))+ 'is' + '$$%s$$'%(latex(F))))
+	</script>
 	 </div>
     </div>
 

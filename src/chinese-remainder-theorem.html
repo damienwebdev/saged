@@ -7,18 +7,16 @@
 
   <div class="big">
     <div class="mycell" style="text-align:center;">
-
+  <script type="text/x-sage">
+@interact
+def f(A=input_box(1, label="Value 1"),B=input_box(5, label="Modulo 1"),C=input_box(2, label="Value 2"),D=input_box(7, label="Modulo 2"),E=input_box(8, label="Value 3"),F=input_box(16, label="Modulo 3")):
+  L = CRT_list([A,C,E], [B,D,F])
+  print("If x = %s mod %s"%(A,B))
+  print("And x = %s mod %s"%(C,D))
+  print("And x = %s mod %s"%(E,F))
+  print("Then x = %s"%(L))
+  </script>
     </div>
-		<script type="text/x-sage">
-		@interact
-		def f(A=input_box(1, label="Value 1"),B=input_box(5, label="Modulo 1"),C=input_box(2, label="Value 2"),D=input_box(7, label="Modulo 2"),E=input_box(8, label="Value 3"),F=input_box(16, label="Modulo 3")):
-			L = CRT_list([A,C,E], [B,D,F])
-			html("If x = %s mod %s"%(A,B))
-			html("And x = %s mod %s"%(C,D))
-			html("And x = %s mod %s"%(E,F))
-			html("Then x = %s"%(L))
-
-		</script>
   </div>
   <div class="small">
     <h2 class="blueBox">Notes</h2>

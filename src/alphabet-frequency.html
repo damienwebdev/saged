@@ -5,24 +5,20 @@
   </div>
 
   <div class="big">
-    <div id="mycell">
-
+    <div class="mycell" style="text-align:center;">
+  <script type="text/x-sage">
+@interact
+def f(s = ("Enter an encrypted string", "LOJUM YLJME PDYVJ QXTDV SVJNL DMTJZ WMJGG YSNDL UYLEO SKDVC GEPJS MDIPD NEJSK DNJTJ LSKDL OSVDV DNGYN VSGLL OSCIO LGOYG ESNEP CGYSN GUJMJ DGYNK DPPYX PJDGG SVDNT WMSWS GYLYS NGSKJ CEPYQ GSGLD MLPYN IUSCP QOYGM")):
+ import collections
+ s = ''.join([i for i in s if i.isalpha()])
+ s = s.upper()
+ n = float(len(s))
+ mylist = collections.Counter(s).most_common()
+ pretty_print(html("Sorted by frequency:"))
+ for character, freq in mylist:
+   pretty_print(html("%s %.2f" % (character, (freq/n))))
+</script>
     </div>
-	<script type="text/x-sage">
-	@interact
-	def f(s = ("Enter an encrypted string", "LOJUM YLJME PDYVJ QXTDV SVJNL DMTJZ WMJGG YSNDL UYLEO SKDVC GEPJS MDIPD NEJSK DNJTJ LSKDL OSVDV DNGYN VSGLL OSCIO LGOYG ESNEP CGYSN GUJMJ DGYNK DPPYX PJDGG SVDNT WMSWS GYLYS NGSKJ CEPYQ GSGLD MLPYN IUSCP QOYGM")):
-	 import collections
-	 s = ''.join([i for i in s if i.isalpha()])
-	 s = s.upper()
-	 n = float(len(s))
-
-	 mylist = collections.Counter(s).most_common()
-
-
-	 pretty_print(html("Sorted by frequency:"))
-	 for character, freq in mylist:
-		 pretty_print(html("%s %.2f" % (character, (freq/n))))
-	</script>
   </div>
 </div>
 
@@ -34,7 +30,7 @@
   'E', next 'T', and so on. Note that this strategy takes some detective work and will not work if employed on a short encrypted string. It is also useful to examine common n-grams.
 </p>
 <div class="notes">
-  <img src="images/alphafreqtablewiki.png" alt="Alphabet Frequency (from Wikipedia)" />
+  <img src="./images/alphafreqtablewiki.png" alt="Alphabet Frequency (from Wikipedia)" />
 </div>
 
 {% endblock %}

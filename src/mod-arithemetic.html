@@ -6,9 +6,9 @@
     </div>
 
 <div class="big">
- <div id="mycell" style="text-align:center;">
+ <div class="mycell" style="text-align:center;">
 
-<script type="text/x-sage">
+	<script type="text/x-sage">
 @interact
 def f(V=input_box(2, type=str, label="Expression"), U=input_box(2, label="Mod") ):
 	L = V.replace("{","(").replace("}",")")
@@ -16,8 +16,8 @@ def f(V=input_box(2, type=str, label="Expression"), U=input_box(2, label="Mod") 
 	R = IntegerModRing(U)
 	a = R(q)
 	M = latex(L).replace("\\text{\\texttt","").replace("{\\char`\\^}","^{")
-	html("$$%s \mod  %s$$"%(M,latex(U)) + '=' + "$$%s \mod %s$$"%(latex(q), latex(U)) + '=' +"$$%s$$"%(latex(a)))
-</script>
+	pretty_print(	html("$$%s \mod  %s$$"%(M,latex(U)) + '=' +"$$%s$$"%(latex(a))))
+	</script>
 
  </div>
     </div>

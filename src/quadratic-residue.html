@@ -6,7 +6,8 @@
     </div>
 
 <div class="big">
- <div class="mycell" style="text-align:center;"><script type="text/x-sage">
+ <div class="mycell" style="text-align:center;">
+ <script type="text/x-sage">
 @interact
 def f(V=input_box(5, label="Possible Square"),U=input_box(5, label="Mod")):
 	global r
@@ -14,9 +15,9 @@ def f(V=input_box(5, label="Possible Square"),U=input_box(5, label="Mod")):
 	b = r(V)
 	L = b.is_square()
 	if(L == true):
-		html("$%s \ \mathrm{is \ a \ square \  mod} \ %s$"%(latex(V), latex(U)))
+		pretty_print(html("$%s \ \mathrm{is \ a \ square \  mod} \ %s$"%(latex(V), latex(U))))
 	else:
-		html("$%s \ \mathrm{is \ not \ a \ square \ mod} \ %s$"%(latex(V), latex(U)))
+		pretty_print(html("$%s \ \mathrm{is \ not \ a \ square \ mod} \ %s$"%(latex(V), latex(U))))
  </script>
 </div>
 </div>
