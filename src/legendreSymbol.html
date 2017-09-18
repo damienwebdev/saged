@@ -1,0 +1,38 @@
+{% extends "page.html" %}
+{% block content %}
+<div class="threeColumnHorizontal">
+	<div class="small">
+    	<h2 class="blueBox" id="pageTitle">Legendre Symbol</h2>
+    </div>
+
+<div class="big">
+	<h2 style="visibility:hidden;">Hidden</h2>
+ <div id="mycell" style="text-align:center;">
+
+	<script type="text/x-sage">
+	@interact
+	def f(U = ("Upper Jacobi", 2),L = ("Lower Jacobi: ", 21)):
+		global r
+		r = kronecker(U,L)
+		html('$$({%s \over %s}) = %s$$'%(latex(U),latex(L), latex(r)))
+	</script>
+
+ </div>
+</div>
+<div class="small">
+  <h2 class="blueBox">Notes</h2>
+</div>
+The Legendre symbol is a quadratic character mod a prime number p with values 1,-1,0. For a nonzero integer a mod p, the Legendre symbol
+<img src="http://latex.codecogs.com/svg.latex?\left(\frac{a}{p}\right)" border="none"/> is 1 if a is a quadratic residue, -1 if a is not a nonresidue. The Legendre symbol is zero is a = 0.
+
+<img src="http://latex.codecogs.com/svg.latex?\left(\frac{a}{n}\right)=\left(\frac{a}{p_1}\right)^{\alpha_1} \cdots \left(\frac{a}{p_k}\right)^{\alpha_k}" border="none"/> where
+        	<div class="notes"><img src="images/mathFormulasLatex/jacobiSymbol/jacobi1.png" alt="Jacobi Values"/></div>
+            <div class="notes"><img src="images/mathFormulasLatex/jacobiSymbol/jacobi2.png" alt="Jacobi Values"/></div>
+            <div class="notes"><img src="images/mathFormulasLatex/jacobiSymbol/jacobi3.png" alt="Jacobi Values"/></div>
+            <div class="notes"><img src="images/mathFormulasLatex/jacobiSymbol/jacobi4.png" alt="Jacobi Values"/></div>
+
+</div>
+
+</div>
+
+{% endblock %}

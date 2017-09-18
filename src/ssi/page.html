@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>About SageD</title>
+
+    <!--css-->
+    <!-- Latest compiled and minified CSS (bootstrap) -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="css/default.css" media="all" />
+    <link rel="stylesheet" href="css/styles.css" media="screen" />
+    <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width:64em)" />
+    <link rel="stylesheet" type="text/css" href="css/nav/component.css" />
+
+    <!--scripts-->
+    <script src="js/nav/modernizr.custom.js"></script>
+    <script src="js/nav/classie.js"></script>
+    <script src="js/nav/gnmenu.js"></script>
+
+    <script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>$(function () {
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    });
+    </script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      {% include 'header.html' %}
+      <div class="contentWrapper">
+        <div class="contentContainer">
+          {% block content %} {% endblock %}
+        </div>
+      </div>
+      {% include 'simpleFooter.html' %}
+    </div>
+  </body>
+</html>

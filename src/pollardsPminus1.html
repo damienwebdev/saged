@@ -1,0 +1,35 @@
+{% extends "page.html" %}
+{% block content %}
+<div class="threeColumnHorizontal">
+	<div class="small">
+    	<h2 class="blueBox" id="pageTitle">Pollard's <em>p-1</em> Factorization Algorithm</h2>
+    </div>
+
+<div class="big">
+	<h2 style="visibility:hidden;">Hidden</h2>
+ <div id="mycell" style="text-align:center;">
+
+ <script type="text/x-sage">
+@interact
+def f(n = ("Enter an integer to be factored", 13927189), b = ("Choose an iterative bound", 100)):
+	a = 2;
+	for j in range(2,b):
+		a = a**j % n
+	d = gcd(a-1, n);
+	print "Factors of",n,"are:",d,"and",n/d
+	if 1 < d < n: return d;
+	else: return -1;
+</script>
+
+ </div>
+</div>
+</div>
+<div class="small">
+  <h2 class="blueBox">Notes</h2>
+</div>
+Pollard's <em>p</em>-1 algorithm is useful in finding the prime factors of a number <em>n</em>, though it may be necessary to run the algorithm multiple times to reduce all factors to primes. Please choose a reasonable bound; values with too many digits could cause the algorithm to stall.
+</div>
+
+</div>
+
+{% endblock %}

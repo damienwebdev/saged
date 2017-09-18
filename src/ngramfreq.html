@@ -1,0 +1,40 @@
+{% extends "page.html" %}
+{% block content %}
+<div class="threeColumnHorizontal">
+	<div class="small">
+    	<h2 class="blueBox" id="pageTitle"><em>n</em>-gram Frequency Table</h2>
+    </div>
+
+<div class="big">
+	<h2 style="visibility:hidden;">Hidden</h2>
+ <div id="mycell" style="text-align:center;">
+
+ <script type="text/x-sage">
+@interact
+def f(s = input_box("LOJUM YLJME PDYVJ QXTDV SVJNL DMTJZ WMJGG YSNDL UYLEO SKDVC GEPJS MDIPD NEJSK DNJTJ LSKDL OSVDV DNGYN VSGLL OSCIO LGOYG ESNEP CGYSN GUJMJ DGYNK DPPYX PJDGG SVDNT WMSWS GYLYS NGSKJ CEPYQ GSGLD MLPYN IUSCP QOYGM", label ="Enter an encrypted string", type = str), n = input_box(3, label ="Enter a length", type=int)):
+	import collections
+	s = filter(lambda _: _.isalpha(), s.upper())
+	s = list(s)
+	def ngram(input, n):
+		return zip(*[input[i:] for i in range(n)])
+	nlist = ngram(s, n)
+	mylist = collections.Counter(nlist).most_common()
+	pretty_print(html("Sorted by frequency:"))
+	for character, freq in mylist:
+		pretty_print(html("%r %d" % (character, freq)))
+</script>
+
+ </div>
+</div>
+</div>
+<div class="small">
+  <h2 class="blueBox">Notes</h2>
+</div>
+Bigram and trigram frequencies are useful in deciphering basic encryptions for which each letter corresponds to a different encrypted letter. Using the tables below, we can guess which encrypted sequences correspond to common word snippets. Note that this strategy takes some detective work and will not work if employed on a short encrypted string.
+<div class="notes"><img src="images/ngramfreqtable.png" alt="n-gram Frequency (from Practical Cryptography)"/></div>
+<!--p style="text-align:center;"><a href="http://en.wikipedia.org/wiki/Jacobi_symbol">Link to Wiki</a></p>-->
+</div>
+
+</div>
+
+{% endblock %}

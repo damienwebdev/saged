@@ -1,0 +1,34 @@
+{% extends "page.html" %}
+{% block content %}
+<div class="threeColumnHorizontal">
+		<div class="small">
+			<h2 class="blueBox" id="pageTitle">Totient Function</h2>
+		</div>
+
+		<div class="big">
+			<div id="mycell" style="text-align:center;">
+
+ <script type="text/x-sage">
+
+@interact
+def f(U = ("Totient Value", 7)):
+	global r
+	r = euler_phi(U)
+	html('$$\phi(%s) = %s$$'%(latex(U), latex(r)))
+</script>
+			</div>
+        </div>
+  <div class="small">
+   <h2 class="blueBox">Notes</h2>
+  </div>
+Euler's totient or phi function of an integer n,
+<img src="http://latex.codecogs.com/svg.latex?\phi(n)" border="none"/>, counts the positive integers less than or equal to n that are relatively prime to n. The totient function is multiplicative, that is <img src="http://latex.codecogs.com/svg.latex?\phi(mn)=\phi(m) \phi(n)" border="none"/> if m and n are coprime. <br>
+If p is prime and <img src="http://latex.codecogs.com/svg.latex?k \geq 1" border="none"/> then
+<img src="http://latex.codecogs.com/svg.latex?\phi(p^k)=p^k \left( 1 - \frac{1}{p}\right)" border="none"/>
+<br>
+Euler's product formula states
+<img src="http://latex.codecogs.com/svg.latex?\phi(n)=n \Pi_{p|n} \left( 1- \frac{1}{p}\right)" border="none"/> for each distinct prime number p that divides n.
+		<div class="small">
+		</div>
+</div>
+{% endblock %}

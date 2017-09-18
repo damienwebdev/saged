@@ -1,0 +1,39 @@
+{% extends "page.html" %}
+{% block content %}
+<div class="threeColumnHorizontal">
+	<div class="small">
+   		<h2 class="blueBox" id="pageTitle">Quadratic Residue</h2>
+    </div>
+
+<div class="big">
+ <div class="mycell" style="text-align:center;"><script type="text/x-sage">
+@interact
+def f(V=input_box(5, label="Possible Square"),U=input_box(5, label="Mod")):
+	global r
+	r = IntegerModRing(U)
+	b = r(V)
+	L = b.is_square()
+	if(L == true):
+		html("$%s \ \mathrm{is \ a \ square \  mod} \ %s$"%(latex(V), latex(U)))
+	else:
+		html("$%s \ \mathrm{is \ not \ a \ square \ mod} \ %s$"%(latex(V), latex(U)))
+ </script>
+</div>
+</div>
+<div class="small">
+<h2 class="blueBox">Notes</h2>
+</div>
+An integer q is a quadratic reside mod n if it is congruent to a perfect square mod n, that is if there exists an integer x such that
+<img src="http://latex.codecogs.com/svg.latex?x^2 \equiv q \mod n" border="none"/>. If q is not congruent to a perfect square mod n, then it is a quadratic non residue mod n. If n is an odd prime number, then there are (n+1)/2 quadratic residues and nonresidues.
+
+    <div class="small">
+    <p></p>
+    </div>
+
+
+</div>
+
+
+
+
+{% endblock %}

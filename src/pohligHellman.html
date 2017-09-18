@@ -1,0 +1,35 @@
+{% extends "page.html" %}
+{% block content %}
+<div class="threeColumnHorizontal">
+	<div class="small">
+    	<h2 class="blueBox" id="pageTitle">Pohlig-Hellman Algorithm</h2>
+    </div>
+
+<div class="big">
+	<h2 style="visibility:hidden;">Hidden</h2>
+ <div id="mycell" style="text-align:center;">
+
+	<script type="text/x-sage">
+	@interact
+	def dlog(e = ("Equivalence class", 8),g = ("Argument", 5),p = ("Modulus", 103)):
+		try:
+			x = log(Mod(e,p),Mod(g,p))
+		except ZeroDivisionError: 	x = "DNE"
+		html('%s = $$%s^{%s} \mod %s'%(latex(e),latex(g),latex(x),latex(p)))
+	</script>
+
+ </div>
+</div>
+</div>
+<div class="small">
+  <h2 class="blueBox">Notes</h2>
+</div>
+The Pohlig-Hellman algorithm computes the discrete logarithm in a multiplicative group with order that is a smooth integer, or an integer that factors completely into small prime numbers. The Poholig-Hellman algorithm computes the discrete log x such that
+<img src="http://latex.codecogs.com/svg.latex?e \equiv g^x \mod p" border="none"/> if such an x exists.
+
+<!--p style="text-align:center;"><a href="http://en.wikipedia.org/wiki/Jacobi_symbol">Link to Wiki</a></p>-->
+</div>
+
+</div>
+
+{% endblock %}

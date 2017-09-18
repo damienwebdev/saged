@@ -1,0 +1,35 @@
+{% extends "page.html" %}
+{% block content %}
+
+<div class="threeColumnHorizontal">
+	<div class="small">
+    	<h2 class="blueBox" id="pageTitle">Elliptic Curves</h2>
+    </div>
+
+<div class="big">
+ <div id="mycell" style="text-align:center;">
+ <script type="text/x-sage">
+
+@interact
+def f(p = ("Modulus", 5), a = ("a", 1), b = ("b", 3) ):
+	F = GF(p)
+	E = EllipticCurve(F,[a, b])
+	S = E.points()
+	html('$$%s'%(S))
+</script>
+ </div>
+ </div>
+
+ </div>
+</div>
+<div class="small">
+ <h2 class="blueBox">Notes</h2>
+ </div>
+An elliptic curve is a plane algebraic curve defined by an equation of the form
+<img src="http://latex.codecogs.com/svg.latex?y^2 = x^3 + ax +b" border="none"/>.
+
+</div>
+
+</div>
+
+{% endblock %}

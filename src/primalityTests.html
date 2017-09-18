@@ -1,0 +1,29 @@
+{% extends "page.html" %}
+{% block content %}
+<div class="threeColumnHorizontal">
+	<div class="small">
+    	<h2 class="blueBox" id="pageTitle">Primality Tester</h2>
+    </div>
+
+<div class="big">
+ <div id="mycell" style="text-align:center;">
+
+	<script type="text/x-sage">
+	@interact
+	def f(U = ("Possible Prime", 2)):
+		r = U in Primes()
+		if(r):
+			html("%s is prime"%(U))
+		else:
+			html("%s is not prime"%(U))
+	</script>
+
+ </div>
+</div>
+
+<div class="small">
+</div>
+
+</div>
+
+{% endblock %}

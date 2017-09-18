@@ -1,0 +1,25 @@
+{% extends "page.html" %}
+{% block content %}
+<div class="threeColumnHorizontal">
+	<div class="small">
+    <h2 class="blueBox" id="pageTitle">Integer Factorization</h2>
+    </div>
+
+    <div class="big">
+     <div id="mycell" style="text-align:center;">
+<script type="text/x-sage">
+@interact
+def f(U = ("Number to be factored", 1)):
+	F = factor(U)
+	html('The Factorization of' + "$$%s$$"%(latex(U))+ 'is' + '$$%s$$'%(latex(F)))
+</script>
+	 </div>
+    </div>
+
+    <div class="small">
+    <p></p>
+    </div>
+
+
+</div>
+{% endblock %}

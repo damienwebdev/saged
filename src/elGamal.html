@@ -1,0 +1,44 @@
+{% extends "page.html" %}
+{% block content %}
+
+<div class="threeColumnHorizontal">
+	<div class="small">
+    <h2 class="blueBox" id="pageTitle">elGamal Encryption</h2>
+    </div>
+
+<div class="big">
+ <div class="mycell" style="text-align:center;">
+
+	<script type="text/x-sage">
+	@interact
+	def elgamal_encrypt(pub_key = ("Public Key", 210904), g = ("Generator", 3), p = ("Prime", 2^19-1), m = ("Message", 12345)):
+		k = floor( 1+(p-2)*random())
+		c1 = Mod(g,p)^k
+		c2 = m*Mod(pub_key^k,p)
+		html('ciphertext:(%s,%s)'%(latex(c1),latex(c2)))
+	</script>
+
+ </div>
+
+ <div class="mycell" style="text-align:center;">
+ <script type="text/x-sage">
+@interact
+def elgamal_decrypt(pri_key = ("Private Key", 1000), g = ("Generator", 3), p = ("Prime", 2^19-1), m1 = ("Ciphertext 1", 29073), m2 = ("Ciphertext 2", 277350)):
+	M = Mod(m2,p)*Mod(m1,p)^(-pri_key)
+	html('message:%s'%(latex(M)))</script>
+ </div>
+
+
+ </div>
+
+ <div class="small">
+ <p></p>
+ </div>
+
+
+</div>
+
+
+
+
+{% endblock %}

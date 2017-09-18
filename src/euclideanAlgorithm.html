@@ -1,0 +1,39 @@
+{% extends "page.html" %}
+{% block content %}
+
+<div class="threeColumnHorizontal">
+	<div class="small">
+    	<h2 class="blueBox" id="pageTitle">Euclidean Algorithm</h2>
+    </div>
+
+<div class="big">
+ <div id="mycell" style="text-align:center;">
+
+<script type="text/x-sage">
+@interact
+def f(N=input_box(12, label="Integer 1"), M=input_box(15, label="Integer 2")):
+	d,u,v = xgcd(N,M)
+	html('$$%s=%s(%s)+%s(%s)$$'%(latex(d),latex(N),latex(u),latex(M),latex(v)))
+</script>
+
+ </div>
+    </div>
+  <div class="small">
+  <h2 class="blueBox">Notes</h2>
+  </div>
+The extended Euclidean algorithm (xgcd) takes two positive numbers M,N and successively divides one number into another and computes directly the integer quotient and remainder at each stage. This algorithm produces a strictly decreasing sequence of remainders that terminates at zero, where the last nonzero remainder in the sequence is the greatest common denominator (gcd) g. <br>
+The Sage command g,x,y = gcd(M,N) returns the triple g,x,y for which g = x*M + y*N.
+
+
+
+    <div class="small">
+    <p></p>
+    </div>
+
+
+</div>
+
+
+
+
+{% endblock %}

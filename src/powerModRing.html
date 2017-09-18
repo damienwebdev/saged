@@ -1,0 +1,35 @@
+{% extends "page.html" %}
+{% block content %}
+<div class="threeColumnHorizontal">
+	<div class="small">
+    	<h2 class="blueBox" id="pageTitle">Basic Modular Arithmatic</h2>
+    </div>
+
+<div class="big">
+ <div id="mycell" style="text-align:center;">
+
+<script type="text/x-sage">
+@interact
+def f(V=input_box(2, type=str, label="Expression"), U=input_box(2, label="Mod") ):
+	L = V.replace("{","(").replace("}",")")
+	q = sage_eval(L)
+	R = IntegerModRing(U)
+	a = R(q)
+	M = latex(L).replace("\\text{\\texttt","").replace("{\\char`\\^}","^{")
+	html("$$%s \mod  %s$$"%(M,latex(U)) + '=' + "$$%s \mod %s$$"%(latex(q), latex(U)) + '=' +"$$%s$$"%(latex(a)))
+</script>
+
+ </div>
+    </div>
+
+    <div class="small">
+    <p></p>
+    </div>
+
+
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "page.html" %} {% block content %}
+
+<div class="threeColumnHorizontal">
+  <div class="small">
+    <h2 class="blueBox" id="pageTitle">Chinese Remainder Theorem</h2>
+  </div>
+
+  <div class="big">
+    <div class="mycell" style="text-align:center;">
+
+    </div>
+		<script type="text/x-sage">
+		@interact
+		def f(A=input_box(1, label="Value 1"),B=input_box(5, label="Modulo 1"),C=input_box(2, label="Value 2"),D=input_box(7, label="Modulo 2"),E=input_box(8, label="Value 3"),F=input_box(16, label="Modulo 3")):
+			L = CRT_list([A,C,E], [B,D,F])
+			html("If x = %s mod %s"%(A,B))
+			html("And x = %s mod %s"%(C,D))
+			html("And x = %s mod %s"%(E,F))
+			html("Then x = %s"%(L))
+
+		</script>
+  </div>
+  <div class="small">
+    <h2 class="blueBox">Notes</h2>
+  </div>
+  Suppose <img src="http://latex.codecogs.com/svg.latex?n_1,\dots,n_k" border="none" />
+	are positive integers that are pairwise coprime. Then, for any given sequence
+	of integers <img src="http://latex.codecogs.com/svg.latex?a_1,\dots,a_k" border="none"/>
+	there exists an integer x that solves the following system of simultaneous congruences:
+	<br>
+  <img src="http://latex.codecogs.com/svg.latex?\begin{cases} x\equiv a_1 & \mod n_1 \\ \dots \\ x \equiv a_k & \mod n_k\end{cases}" border="none" />
+	<br> A solution x exists if and only if
+  <img src="http://latex.codecogs.com/svg.latex?a_i\equiv a_j \mod \gcd(n_i,n_j) \, \forall i,j" border="none" />.
+  <div class="small">
+    <p></p>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{
+  "name": "saged",
+  "version": "1.0.0",
+  "description": "Number Theory Tools in Sage",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damienwebdev/saged.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/damienwebdev/saged/issues"
+  },
+  "homepage": "https://github.com/damienwebdev/saged#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-data": "^1.2.1",
+    "gulp-nunjucks-render": "^2.2.1",
+    "gulp-sass": "^3.1.0",
+    "run-sequence": "^2.1.0"
+  }
+}
