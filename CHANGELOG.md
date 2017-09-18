@@ -3,10 +3,17 @@
 ## v2.0.0 - 9/18/2017
 
 Bugfixes:
+Fixed some bugs in the navigation
+Added missing links to nav
+Removed some massive images to reduce project weight
+Reviewed all modules to ensure they work with Sage changes.
 
 Features:
+Changed the styles of the "contacts page".
+Added page titles to all pages.
 
 Architecture:
+Refactored the entire project into a modern repo with npm/gulp.
 
 ## v1.6.0 - 11/09/2014
 
