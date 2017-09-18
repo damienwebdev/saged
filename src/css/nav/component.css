@@ -21,7 +21,7 @@
 		text-transform: none;
 		font-weight: 300;
 		font-family: 'Lato', Arial, sans-serif;
-		line-height: 3.75em;
+		line-height: 3.5em;
 }
 
 .gn-menu-main {
@@ -114,6 +114,13 @@
 .gn-menu {
 		border-bottom: 1px solid #c6d0da;
 		text-align: left;
+}
+
+.gn-menu a{
+	padding-left: 15px;
+	font-size: 1em;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 .gn-menu li:not(:first-child),
@@ -313,7 +320,7 @@ input.gn-search:focus {
 		height: 3em;
 }
 
-@media screen and (max-width: 422px) { 
+@media screen and (max-width: 422px) {
 	.gn-menu-wrapper.gn-open-all {
 			-webkit-transform: translateX(0px);
 			-moz-transform: translateX(0px);

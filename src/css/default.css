@@ -1,9 +1,5 @@
 @charset "utf-8";
 /* CSS Document */
-p{
-	font-size:1em;
-	font-family: 'Signika', Arial, sans-serif;
-}
 p img {
 	border: .2em solid #E8E8E8;
 }
@@ -29,7 +25,7 @@ ul{
 	color:#FFF;
 }
 li{
-	font-size:1.1em;
+	font-size:1em;
 	text-decoration:none;
 	color:#FFF;
 }

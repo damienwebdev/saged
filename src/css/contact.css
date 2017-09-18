@@ -1,0 +1,43 @@
+.contacts {
+  display: flex;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contact-card {
+  box-shadow: -1px 15px 30px -12px black;
+  width: 300px;
+  text-align: center;
+  margin: 0 20px;
+  border-radius: 5px;
+}
+
+.contact-card__image {
+    margin-bottom: 25px;
+}
+
+.contact-card__title {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  color: #00578A;
+}
+
+.contact-card__name {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.contact-card__description {
+  padding: 15px;
+}
+
+.contact-card__description p{
+  margin: 8px 0;
+  color: #111111;
+}
